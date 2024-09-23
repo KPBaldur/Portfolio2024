@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root{
+    --bg-primary-color: #333;
+    --bg-secondary-color:#222;
+    --secondary-color: #ff6600;
+    --tercary-color:#e65c00;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: var(--bg-secondary-color);
+    color: #fff;
+    padding: 10px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; /* Asegura que los elementos estén en extremos opuestos */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.portfolio-text {
+    color: var(--secondary-color);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    height: 100%;
+}
+
+nav ul li {
+    margin: 0 15px;
+    height: 100%;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 10px;
+}
+
+nav ul li a:hover {
+    background-color: var(--secondary-color);
+    color: var(--bg-secondary-color);
+}
+
+.language-dropdown {
+    position: relative;
+    height: 100%;
+}
+
+.language-dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 100px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.language-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.language-dropdown .dropdown-content a {
+    color: #fff;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+}
+
+.language-dropdown .dropdown-content a:hover {
+    background-color: #575757;
+}
+
+.download-cv-button {
+    background-color: var(--secondary-color);
+    color: var(--bg-secondary-color);
+    padding: 10px 15px;
+    text-decoration: none;
+    margin-left: 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.download-cv-button:hover {
+    background-color: #ff9800;
+    border: 2px;
+    border-color: aliceblue;
+}
