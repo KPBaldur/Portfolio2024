@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, 
+    initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <!-- Icon Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
     <title>Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -20,20 +26,31 @@
                     <li><a href="#portfolio">Portafolio</a></li>
                     <li><a href="#habilidades">Habilidades</a></li>
                     <li><a href="#contacto">Contacto</a></li>
-                    <li class="language-dropdown">
-                        <a href="#idioma">
-                            <img src="/icon/globe-icon.svg" alt="Idioma" class="language-icon">
-                        </a>
-                        <ul class="dropdown-content">
-                            <li><a href="?lang=es">Español</a></li>
-                            <li><a href="?lang=en">English</a></li>
-                        </ul>
-                    </li>
                 </ul>
                 <a href="#download-cv" class="download-cv-button">Download CV</a>
             </nav>
         </div>
     </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hola!, yo soy</h3>
+            <h1>Kevin Pizarro</h1>
+            <h3>Desarrollador FullStack <span class="texto-multiple">/</span> Desarrollador de Unreal Engine</h3>
+            <p>Soy apasionado por la tecnología y el diseño, con experiencia en el desarrollo
+                de soluciones web atractivas y eficientes. Mi objetivo es brindar una experiencia
+                de usuario excepcional a través de la combinación de arte y tecnología. Creo que
+                hoy en día la tecnología y el arte pueden coexistir de una manera brillante y
+                hermosa, entregando nuevas experiencias tanto para desarrolladores como para
+                usuarios.</p>
+        </div>
+        
+        <div class="home-img">
+            <video src="test.mp4" autoplay loop muted></video>
+        </div>
+    </section>
+    
+
     <script src="script.js"></script>
 </body>
 </html>
