@@ -126,7 +126,7 @@ section.home {
     justify-content: space-between;
     padding: 20px;
     max-width: 90%;
-    margin: 50px auto;
+    margin: 120px auto ;
 }
 
 .home-content {
@@ -162,6 +162,59 @@ section.home {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
+}
+
+
+.technologies {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.technologies h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #f2efe6;
+}
+
+.slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide-track {
+    display: flex;
+    animation: scroll 40s linear infinite;
+    width: calc(250px * 20); /* Ajusta según la cantidad de slides */
+}
+
+.slide {
+    width: 250px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide p{
+    font-size: 1.5em;
+    font-family: Roboto;
+    color: #f2efe6;
+}
+
+/* Tamaño de los iconos */
+.icon {
+    font-size: 90px; /* Ajusta este tamaño según sea necesario */
+    color: var(--secondary-color); /* Cambia el color según sea necesario */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * 10)); /* Ajusta según la cantidad de slides visibles */
+    }
 }
 
 
@@ -222,3 +275,4 @@ section.home {
     .home-content h1 {
       font-size: 5rem;
     }
+}
