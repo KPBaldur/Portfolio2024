@@ -4,7 +4,6 @@
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background: var(--bg-primary-color);
-    
 }
 
 :root{
@@ -25,20 +24,20 @@ header {
     background-color: #333;
     color: #fff;
     padding: 0 0;
-    height: 4.5rem; /* Altura fija para el header */
+    height: 4.5rem;
 }
 
 .container {
     display: flex;
-    justify-content: space-between; /* Asegura que los elementos estén en extremos opuestos */
+    justify-content: space-between;
     align-items: center;
     max-width: 100%;
     margin: 0 auto;
     padding: 0 20px;
-    height: 100%; /* Asegura que el contenedor ocupe todo el alto del header */
+    height: 100%;
 }
 
-span {
+.portfolio-text {
     color: var(--secondary-color);
 }
 
@@ -64,18 +63,18 @@ span {
 nav {
     display: flex;
     align-items: center;
-    height: 100%; /* Asegura que el nav ocupe todo el alto del header */
+    height: 100%;
 }
 
 nav ul {
     display: flex;
     list-style: none;
-    height: 100%; /* Asegura que el ul ocupe todo el alto del header */
+    height: 100%;
 }
 
 nav ul li {
     margin: 0 15px;
-    height: 100%; /* Asegura que los li ocupen todo el alto del header */
+    height: 100%;
 }
 
 nav ul li a {
@@ -85,7 +84,7 @@ nav ul li a {
     font-weight: bold;
     display: flex;
     align-items: center;
-    height: 100%; /* Asegura que los enlaces ocupen todo el alto del header */
+    height: 100%;
     padding: 0 10px;
 }
 
@@ -97,14 +96,14 @@ nav ul li a:hover {
 .download-cv-button {
     background-color: var(--secondary-color);
     color: #333;
-    padding: 0 15px; /* Elimina el padding superior e inferior */
+    padding: 0 15px;
     text-decoration: none;
     font-weight: bold;
     margin-left: 20px;
-    height: 100%; /* Asegura que el botón ocupe todo el alto del header */
+    height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center; /* Centra el texto horizontalmente */
+    justify-content: center;
 }
 
 .download-cv-button:hover {
@@ -168,10 +167,19 @@ section.home {
 .technologies {
     text-align: center;
     margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.technologies .divisor{
+    border: none;
+    height: 4px;
+    background: var(--secondary-color);
+    margin: 20px 0;
 }
 
 .technologies h1 {
     font-size: 2rem;
+    margin-top: 10px;
     margin-bottom: 10px;
     color: #f2efe6;
 }
@@ -202,10 +210,10 @@ section.home {
     color: #f2efe6;
 }
 
-/* Tamaño de los iconos */
+/* ---------- ICONOS ------------ */
 .icon {
-    font-size: 90px; /* Ajusta este tamaño según sea necesario */
-    color: var(--secondary-color); /* Cambia el color según sea necesario */
+    font-size: 90px; 
+    color: var(--secondary-color);
 }
 
 @keyframes scroll {
@@ -213,10 +221,238 @@ section.home {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(calc(-250px * 10)); /* Ajusta según la cantidad de slides visibles */
+        transform: translateX(calc(-250px * 10));
     }
 }
 
+
+.presentation {
+    background-color: var(--bg-secondary-color);
+    width: 100%;
+    height: 700px;
+}
+
+
+/*about me*/
+.presentation {
+    background-color: #131921;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .about-me-section {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+  }
+  
+  .about-me-content {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .profile-img {
+    border-radius: 10px;
+    max-width: 500;
+    margin-right: 20px;
+  }
+  
+  .text-content {
+    text-align: left;
+    max-width: 800px;
+  }
+  
+  .about-me-section h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .about-me-section h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+  
+  .about-me-text {
+    font-size: 16px;
+    line-height: 1.5;
+    max-height: 100px;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    text-align: justify;
+  }
+  
+  .about-me-text .more-text {
+    display: none;
+  }
+  
+  .about-me-text.expanded {
+    max-height: none;
+  }
+  
+  .about-me-text.expanded .more-text {
+    display: inline;
+  }
+  
+  .read-more-btn, .show-pdf-btn, .show-experience-btn {
+    background-color: #ff9900;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 5px 0 0;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+  }
+  
+  .read-more-btn:hover, .show-pdf-btn:hover, .show-experience-btn:hover {
+    background-color: #e68a00;
+  }
+  
+  .social-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+  
+  .social-btn {
+    background-color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    color: black;
+    text-decoration: none;
+    display: flex;
+    align-items: center; /* Centra verticalmente los iconos */
+    font-size: 18px;
+    transition: background-color 0.3s;
+  }
+  
+  .social-btn i {
+    font-size: 24px;
+    margin-right: 8px;
+    display: flex;
+    align-items: center; /* Centra verticalmente los iconos dentro del elemento <i> */
+  }
+  
+  .social-btn:hover {
+    background-color: #e6e6e6;
+  }
+  
+  .social-btn.linkedin {
+    background-color: #0077b5;
+    color: white;
+  }
+  
+  .social-btn.github {
+    background-color: #333;
+    color: white;
+  }
+  
+  .social-btn.instagram {
+    background-color: #E1306C;
+    color: white;
+  }
+  
+  .social-btn.behance {
+    background-color: #1769ff;
+    color: white;
+  }
+  
+  .social-btn.linkedin:hover, .social-btn.github:hover, .social-btn.instagram:hover, .social-btn.behance:hover {
+    opacity: 0.8;
+  }
+  
+  
+/* PORTFOLIO SECCION */
+.portfolio {
+  background-color: #131921;
+  padding: 40px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+}
+
+.portfolio h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.project-card {
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 30%;
+  flex: 1 1 calc(33% - 40px);
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card img {
+  width: 20;
+  height: auto;
+}
+
+.project-details {
+  padding: 20px;
+  text-align: left;
+}
+
+.project-details h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.project-details p {
+  margin: 5px 0;
+}
+
+.project-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.project-buttons .btn {
+  background-color: #ff9900;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.project-buttons .btn i {
+  margin-right: 8px;
+}
+
+.project-buttons .btn.github {
+  background-color: #333;
+}
+
+.project-buttons .btn.pagina {
+  background-color: #ff9900;
+}
+
+.project-buttons .btn:hover {
+  opacity: 0.8;
+}
 
 
 /*#######################################################*/
