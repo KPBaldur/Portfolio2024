@@ -12,6 +12,12 @@ body {
     --text-primary-color: #f2efe6;
     --secondary-color: #ff6600;
     --tercary-color:#e65c00;
+
+    --bg--test-color: #4B0082;
+    --bg-sec-test-color: #E6E6FA;
+    --bg-ter-test-color: #FFFFFF;
+    --bg-cuart-test-color: #FFD700;
+    --bg-quint-test-color: #9370DB;
 }
 
 * {
@@ -21,7 +27,7 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: var(--bg-secondary-color);
     color: #fff;
     padding: 0 0;
     height: 4.5rem;
@@ -162,6 +168,12 @@ section.home {
     height: auto;
     border-radius: 10px;
 }
+
+.home-img video:hover {
+  transform: scale(1.05); /* Un pequeño zoom en el video */
+  transition: transform 0.3s ease;
+}
+
 
 
 .technologies {
@@ -376,7 +388,6 @@ section.home {
   margin: 20px 0;
 }
 
-  
 /* PORTFOLIO SECCION */
 .portfolio {
   
@@ -466,62 +477,78 @@ section.home {
   opacity: 0.8;
 }
 
-
-
-/*#######################################################*/
-/*----------------------MEDYAQUERYS----------------------*/
-
-@media (max-width: 1200px) {
-    html {
-      font-size: 55%;
-    }
-}
-  
-@media (max-width: 991px) {
-    .header {
-      padding: 2rem 3%;
-    }
-
+/*    SECCION SERVICIOS */ 
+.services-section {
+  background-color: var(--bg-secondary-color);
+  padding: 50px 20px;
+  text-align: center;
+  color: var(--text-primary-color);
 }
 
-/*  NAVBAR */
+.services-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
 
-@media (max-width: 768px) {
-    #menu-icon {
-      display: block;
-    }
-  
-    .navbar {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      padding: 1rem 3%;
-      background: var(--bg-color);
-      border-top: .1rem solid rgba(0, 0, 0, .2);
-      box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
-      display: none;
-    }
-  
-    .navbar .active {
-      display: block;
-    }
-  
-    .navbar a {
-      display: block;
-      font-size: 2rem;
-      margin: 3rem 0;
-    }
-  
-    .home {
-      flex-direction: column;
-    }
-  
-    .home-content h3 {
-      font-size: 2.6rem;
-    }
-  
-    .home-content h1 {
-      font-size: 5rem;
-    }
+.services-section p {
+  font-size: 1.2em;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+}
+
+.service-card i {
+  font-size: 3em;
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+.service-card .more-info-btn {
+  background-color: var(--secondary-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.service-card .more-info-btn:hover {
+  background-color: var(--tercary-color);
 }

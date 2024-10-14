@@ -14,17 +14,13 @@
     <title>Portfolio</title>
 </head>
 <body>
-
-    
     <header>
         <div class="container">
             <div class="logo">
                 <img src="/icon/Metagross.png" alt="Logo">
                 <span class="logo-text">KEVINP <span class="portfolio-text">Portafolio</span></span>
             </div>
-
             <i class='bx bx-menu' id="menu-icon"></i>
-            
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
@@ -33,7 +29,7 @@
                     <li><a href="#habilidades">Habilidades</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
-                <a href="#download-cv" class="download-cv-button">Download CV</a>
+                <a href="index2.html" class="download-cv-button">Download CV</a>
             </nav>
         </div>
     </header>
@@ -52,7 +48,7 @@
         </div>
         
         <div class="home-img">
-            <video src="TestUnreal.mp4" autoplay loop muted></video>
+            <video id="home-video" src="TestUnreal.mp4" autoplay loop muted></video>
         </div>
     </section>
 
@@ -115,9 +111,7 @@
           </div>
           
         </div>
-      </section>
-
-    
+    </section>
 
     <section class="portfolio">
         <h2>Portafolio</h2>
@@ -130,8 +124,8 @@
                     <p>PRONTO</p>
                     <p>Portafolio de desarrollo con Unreal Engine 4 y 5</p>
                     <div class="project-buttons">
-                        <a href=" " target="_blank" class="btn github"><i class='bx bxl-github'></i>Github</a>
-                        <a href=" " target="_blank" class="btn pagina"><i class='bx bx-world'></i>Pagina</a>
+                    <!--<a href=" " target="_blank" class="btn github"><i class='bx bxl-github'></i>Github</a>
+                        <a href=" " target="_blank" class="btn pagina"><i class='bx bx-world'></i>Pagina</a> -->
                     </div>
                 </div>
             </div>
@@ -140,12 +134,12 @@
             <div class="project-card">
                 <img src="img/Portafolio_2022.png" alt="Petshop">
                 <div class="project-details">
-                    <h3>Petshop prueba</h3>
-                    <p>HTML / CSS / JS / Bootstrap</p>
-                    <p>Front de pagina Petshop realizado con Bootstrap y stack basico de programacion web.</p>
+                    <h3>Juega un Rato!</h3>
+                    <p>HTML / CSS / JS</p>
+                    <p>Desarrollo de algunos juegos utilizando stack basico de programacion front y React y Angular.</p>
                     <div class="project-buttons">
-                        <a href="https://github.com/KPBaldur/Petshop-website" target="_blank" class="btn github"><i class='bx bxl-github'></i>Github</a>
-                        <a href="https://kpbaldur.github.io/Petshop-website/" target="_blank" class="btn pagina"><i class='bx bx-world'></i>Pagina</a>
+                        <!-- <a href="https://github.com/KPBaldur/Petshop-website" target="_blank" class="btn github"><i class='bx bxl-github'></i>Github</a>
+                        <a href="https://kpbaldur.github.io/Petshop-website/" target="_blank" class="btn pagina"><i class='bx bx-world'></i>Pagina</a> -->
                     </div>
                 </div>
             </div>
@@ -215,9 +209,6 @@
                 </div>
             </div>
 
-            
-    
-            <!-- Repite el bloque project-card para cada proyecto -->
             <div class="project-card">
                 <img src="img/Random-Color.png" alt="Random Color">
                 <div class="project-details">
@@ -299,7 +290,33 @@
         </div>
     </section>
     
-
+   
+    <section class="services-section">
+        <h2>Mis Servicios Freelance</h2>
+        <p>Ofrezco una variedad de servicios para ayudarte a alcanzar tus objetivos. Desde desarrollo web hasta diseño gráfico, cada servicio está diseñado para brindarte la mejor calidad y resultados.</p>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-code"></i>
+                <h3>Desarrollo Web</h3>
+                <p>Creación de sitios web modernos y funcionales utilizando las últimas tecnologías.</p>
+                <a href="#" class="more-info-btn">Más Información</a>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-paint-brush"></i>
+                <h3>Diseño Gráfico</h3>
+                <p>Diseños atractivos y profesionales para tu marca o proyecto.</p>
+                <a href="#" class="more-info-btn">Más Información</a>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Desarrollo de Apps</h3>
+                <p>Aplicaciones móviles personalizadas para Android e iOS.</p>
+                <a href="#" class="more-info-btn">Más Información</a>
+            </div>
+            <!-- Añade más tarjetas de servicio según sea necesario -->
+        </div>
+    </section>
+    
 
 
     <script src="script.js"></script>

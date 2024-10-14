@@ -21,3 +21,17 @@ document.querySelector('.read-more-btn').addEventListener('click', function() {
   document.querySelector('.show-experience-btn').addEventListener('click', function() {
     window.open('/path/to/experience/page', '_blank');
   });
+
+
+/* MUTE DE VIDEO CON HOVER */
+document.addEventListener("DOMContentLoaded", function() {
+    var video = document.getElementById("home-video");
+
+    video.addEventListener("mouseenter", function() {
+        video.muted = false;
+    });
+
+    video.addEventListener("mouseleave", function() {
+        video.muted = true;
+    });
+});
