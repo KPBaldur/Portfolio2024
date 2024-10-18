@@ -35,3 +35,9 @@ document.addEventListener("DOMContentLoaded", function() {
         video.muted = true;
     });
 });
+
+/* Envio de mensaje por formulario */
+document.querySelector('form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  alert('Mensaje enviado correctamente');
+});
