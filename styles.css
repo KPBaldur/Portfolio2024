@@ -357,6 +357,11 @@ section.home {
   background-color: #e6e6e6;
 }
 
+.social-btn.youtube {
+  background-color: #ff0000;
+  color: white;
+}
+
 .social-btn.linkedin {
   background-color: #0077b5;
   color: white;
@@ -551,4 +556,69 @@ section.home {
 
 .service-card .more-info-btn:hover {
   background-color: var(--tercary-color);
+}
+
+/* formulario de contacto  */
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #292929;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.contact-form {
+  width: 50%;
+}
+
+.contact-form h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.inline-inputs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inline-inputs input {
+  width: 48%;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #ff9900;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #e68a00;
+}
+
+.contact-image {
+  width: 40%;
+}
+
+.contact-image img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
 }
