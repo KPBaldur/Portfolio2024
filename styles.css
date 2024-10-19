@@ -170,7 +170,7 @@ section.home {
 }
 
 .home-img video:hover {
-  transform: scale(1.05); /* Un pequeño zoom en el video */
+  /* transform: scale(1.05); /* Un pequeño zoom en el video */ 
   transition: transform 0.3s ease;
 }
 
