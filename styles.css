@@ -169,12 +169,6 @@ section.home {
     border-radius: 10px;
 }
 
-.home-img video:hover {
-  /* transform: scale(1.05); /* Un pequeño zoom en el video */ 
-  transition: transform 0.3s ease;
-}
-
-
 
 .technologies {
     text-align: center;
