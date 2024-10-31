@@ -1,0 +1,96 @@
+header{
+    background-color: var(--bg-secondary-color);
+    color: #fff;
+    padding: 0 0;
+    height: 4.5rem;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 100%;
+}
+
+.portfolio-text {
+    color: var(--secondary-color);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.portfolio-text {
+    color: var(--secondary-color);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    height: 100%;
+}
+
+nav ul li {
+    margin: 0 15px;
+    height: 100%;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 10px;
+}
+
+nav ul li a:hover {
+    background-color: var(--secondary-color);
+    color: #333;
+}
+
+.download-cv-button {
+    background-color: var(--secondary-color);
+    color: #333;
+    padding: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.download-cv-button:hover {
+    background-color: var(--tercary-color);
+    color: aliceblue;
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
+}
