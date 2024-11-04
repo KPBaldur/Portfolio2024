@@ -101,7 +101,7 @@
     color: black;
     text-decoration: none;
     display: flex;
-    align-items: center; /* Centra verticalmente los iconos */
+    align-items: center;
     font-size: 18px;
     transition: background-color 0.3s;
   }
@@ -110,7 +110,7 @@
     font-size: 24px;
     margin-right: 8px;
     display: flex;
-    align-items: center; /* Centra verticalmente los iconos dentro del elemento <i> */
+    align-items: center;
   }
   
   .social-btn:hover {
