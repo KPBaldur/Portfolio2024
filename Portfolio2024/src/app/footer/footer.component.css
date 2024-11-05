@@ -64,6 +64,7 @@ footer {
     background-color: #1b1b1b;
     padding: 20px;
     margin-top: 20px;
+    position: relative;  /* Added to position elements correctly within the footer */
 }
 
 .social-media {
@@ -104,4 +105,3 @@ footer {
 .scroll-top-btn:hover {
     background-color: #e68a00;
 }
-
