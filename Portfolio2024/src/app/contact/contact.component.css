@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 200px 80px; /* Aumentado de 80px a 100px */
+    padding: 100px 80px; /* Aumentado de 80px a 100px */
     border-radius: 8px;
     color: #fff;
 }
