@@ -98,3 +98,103 @@ nav ul li a:hover {
     color: var(--text-color);
     display: none;
 }
+
+
+/* Media Query para Tablets (max-width: 1024px) */
+@media screen and (max-width: 64rem) {
+    nav ul li {
+        margin: 0 10px; /* Reducimos el margen entre elementos */
+    }
+
+    nav ul li a {
+        font-size: 0.9rem; /* Reducimos ligeramente el tamaño de fuente */
+    }
+
+    .logo-text {
+        font-size: 1.3rem; /* Reducimos el tamaño del logo */
+    }
+
+    .download-cv-button {
+        padding: 0 10px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Media Query para Móviles (max-width: 768px) */
+@media screen and (max-width: 48rem) {
+    #menu-icon {
+        display: block; /* Mostramos el ícono de menú */
+        cursor: pointer;
+        margin-left: auto; /* Lo posiciona a la derecha */
+        z-index: 1001; /* Por encima del menú */
+    }
+
+    .logo img {
+        height: 40px; /* Reducimos el tamaño del logo */
+    }
+
+    .logo-text {
+        font-size: 1.2rem;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Esconde el menú fuera de la pantalla */
+        background-color: var(--bg-secondary-color);
+        width: 80%; /* Ancho del menú */
+        height: 100vh; /* Altura completa */
+        padding: 5rem 1.5rem;
+        transition: 0.3s ease; /* Animación suave */
+        flex-direction: column; /* Elementos en columna */
+        justify-content: flex-start;
+    }
+
+    nav.active {
+        right: 0; /* Muestra el menú */
+    }
+
+    nav ul {
+        flex-direction: column; /* Lista en vertical */
+        align-items: center;
+        height: auto;
+    }
+
+    nav ul li {
+        margin: 1rem 0;
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+
+    nav ul li a {
+        padding: 1rem;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .download-cv-button {
+        margin: 1.5rem 0;
+        padding: 1rem;
+        width: 100%;
+    }
+}
+
+/* Media Query para móviles pequeños (max-width: 480px) */
+@media screen and (max-width: 30rem) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .logo img {
+        height: 35px;
+    }
+
+    .logo-text {
+        font-size: 1rem;
+    }
+
+    nav {
+        width: 100%; /* Menú ocupa toda la pantalla */
+    }
+}
