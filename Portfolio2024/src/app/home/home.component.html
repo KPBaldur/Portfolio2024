@@ -2,17 +2,24 @@
     <div class="home-content">
         <h3>Hola!, yo soy</h3>
         <h1>Kevin Pizarro</h1>
-        <h3>Desarrollador FullStack <span class="texto-multiple portfolio-text" >/</span> Desarrollador de Unreal Engine</h3>
-        <p>Soy apasionado por la tecnología y el diseño, con experiencia en el desarrollo
-            de soluciones web atractivas y eficientes. Mi objetivo es brindar una experiencia
-            de usuario excepcional a través de la combinación de arte y tecnología. <span class="portfolio-text"> "Creo que
-            hoy en día la tecnología y el arte pueden coexistir de una manera brillante y
-            hermosa, entregando nuevas experiencias tanto para desarrolladores como para
-            usuarios."</span></p>
+        <h3>Desarrollador FullStack<span class="texto-multiple portfolio-text" > / </span>Desarrollador Software</h3>
+        <h3>Desarrollador de Unreal Engine</h3>
+        <p>Especialista en desarrollo Web, desarrollo de software con soluciones creativas
+            y atractivas, con metodologias de experiencia de usuario.
+            <span class="portfolio-text"> "Creo que hoy en día la tecnología y el arte 
+            pueden coexistir de una manera brillante y hermosa, entregando nuevas experiencias 
+            tanto para desarrolladores como para usuarios."</span></p>
     </div>
     
     <div class="home-img">
         <video id="home-video" src="video/TestUnreal.mp4" autoplay loop muted></video>
+            <div class="volume-control">
+                <button (click)="toggleMute()">
+                <i *ngIf="isMuted" class="fas fa-volume-mute"></i>
+                <i *ngIf="!isMuted" class="fas fa-volume-up"></i>
+                </button>
+                <input type="range" id="volume-slider" min="0" max="1" step="0.01" (input)="changeVolume($event)">
+          </div>
     </div>
 </section>
 
