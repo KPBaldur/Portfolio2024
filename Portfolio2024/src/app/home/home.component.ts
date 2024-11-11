@@ -11,19 +11,10 @@ export class HomeComponent implements OnInit {
   constructor(private renderer: Renderer2, private el: ElementRef) {}
 
   ngOnInit(): void {
-    const video = this.el.nativeElement.querySelector('#home-video');
+    const video = this.el.nativeElement.querySelector("#home-video");
     if (video) {
-      video.volume = 0.5; // Comienza con un volumen medio
-      video.muted = false; // Desmutear el video por defecto
-    }
-  }
-
-  changeVolume(event: Event): void {
-    const video = this.el.nativeElement.querySelector('#home-video');
-    const input = event.target as HTMLInputElement;
-    if (video) {
-      video.volume = parseFloat(input.value);
-      this.isMuted = video.volume === 0;
+      video.volume = 0.5;
+      video.muted = this.isMuted;
     }
   }
 
