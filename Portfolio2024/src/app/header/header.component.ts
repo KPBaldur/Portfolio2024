@@ -1,18 +1,24 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-  isMenuOpen = false;
+  menuOpen: boolean = false;
 
-  toggleMenu() {
-    this.isMenuOpen = !this.isMenuOpen;
+  constructor(private translate: TranslateService) {
+    this.translate.setDefaultLang('es'); // Idioma por defecto
   }
 
-  closeMenu() {
-    this.isMenuOpen = false;
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
+
+  onLanguageChange(event: Event) {
+    const selectedLang = (event.target as HTMLSelectElement).value;
+    this.translate.use(selectedLang); // Cambiar idioma
   }
 }

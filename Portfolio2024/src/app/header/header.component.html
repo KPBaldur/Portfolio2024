@@ -1,22 +1,26 @@
-<header>
-    <div class="container">
-        <div class="logo">
-            <img src="icon/Metagross.png" alt="Logo">
-            <span class="logo-text">KEVINP <span class="portfolio-text">Portafolio</span></span>
-        </div>
-        <i class='bx bx-menu' id="menu-icon" (click)="toggleMenu()"></i>
-        <nav [class.active]="isMenuOpen">
-            <ul>
-                <li><a href="#home" (click)="closeMenu()">Home</a></li>
-                <li><a href="#about-me" (click)="closeMenu()">Sobre Mi</a></li>
-                <li><a href="#portafolio" (click)="closeMenu()">Portafolio</a></li>
-                <li><a href="#servicios" (click)="closeMenu()">Servicios</a></li>
-                <li><a href="#contacto" (click)="closeMenu()">Contacto</a></li>
-            </ul>
-            <a href="CVKevinPizarro2024.pdf" 
-               class="download-cv-button" 
-               download="CVKevinPizarro2024.pdf" 
-               (click)="closeMenu()">Download CV</a>
-        </nav>
-    </div>
-</header>
+<nav class="navbar">
+  <div class="navbar-left">
+    <!-- Iniciales KP -->
+    <span class="logo">
+      K<span class="logo-gradient">P</span>
+    </span>
+  </div>
+
+  <div class="navbar-right">
+    <!-- Icono hamburguesa -->
+    <button class="hamburger" (click)="toggleMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+
+  <!-- Menú desplegable -->
+  <div class="menu" [class.active]="menuOpen">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#habilities">Habilities</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>

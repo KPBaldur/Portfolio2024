@@ -12,10 +12,22 @@
     font-style: normal;
 }
 
-body {
-    font-family:    system-ui, 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-    background: var(--bg-primary-color);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: system-ui, 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
 }
+
+body {
+    background-color: var(--bg-primary-color);
+}
+
+html{
+    overflow-x: hidden;
+  }  
 
 :root{
     --bg-primary-color: #131e29;
@@ -29,10 +41,15 @@ body {
     --bg-ter-test-color: #FFFFFF;
     --bg-cuart-test-color: #FFD700;
     --bg-quint-test-color: #9370DB;
-}
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+    /*Definicion de colores */
+    --dark-bg-primary-color: #131e29;
+    --dark-bg-secondary-color:#25282A;
+    --dark-text-primary-color: #f2efe6;
+    --dark-text-secondary-color: #333;
+    --dark-primary-color: #ff6600;
+    --dark-secondary-color:#e65c00;
+
+    
 }
