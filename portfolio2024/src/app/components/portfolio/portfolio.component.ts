@@ -10,11 +10,11 @@ export class PortfolioComponent {
     {
       title: 'API Regular Show',
       tech: 'Python - FastAPI - Uvicorn',
-      description: 'API RESTful con endpoints para capítulos, personajes y temporadas. Proyecto orientado a la comunidad Open Source.',
+      description: 'Desarrollo de API RESTful con endpoints para capítulos, personajes y temporadas. Proyecto orientado a la comunidad Open Source para libre uso a los fans de la serie.',
       images: [
-        'assets/img/regular-show1.png',
-        'assets/img/regular-show2.png',
-        'assets/img/regular-show3.png'
+        '../../../assets/img/RegularShow.png',
+        '../../../assets/img/RegularShowAPI.png',
+        '../../../assets/img/RegularShowAPI2.png'
       ],
       repo: 'https://github.com/kevinp/regularshow-api',
       demo: 'https://regularshow-api.onrender.com'
@@ -40,6 +40,17 @@ export class PortfolioComponent {
       ],
       repo: 'https://github.com/kevinp/fundacion-rescata',
       demo: 'https://fundacion-rescata.cl'
+    },
+    {
+      title: 'Fundación Rescata',
+      tech: 'HTML - CSS - JS',
+      description: 'Sitio web para adopción de animales, enfocado en accesibilidad y diseño UX.',
+      images: [
+        'assets/img/rescata1.png',
+        'assets/img/rescata2.png'
+      ],
+      repo: 'https://github.com/kevinp/fundacion-rescata',
+      demo: 'https://fundacion-rescata.cl'
     }
   ];
 
@@ -53,7 +64,7 @@ export class PortfolioComponent {
 
   nextImage() {
     this.currentImage = 
-      (this.currentImage + 1) % this.selectedProject.images.length;
+      this.currentImage = (this.currentImage + 1) % this.selectedProject.images.length;
   }
 
   prevImage() {

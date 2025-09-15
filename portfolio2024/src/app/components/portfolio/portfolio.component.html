@@ -10,10 +10,11 @@
         
         <div class="carousel-track">
           <img 
-            [src]="selectedProject.images[currentImage]" 
-            [alt]="selectedProject.title" 
+            [src]="selectedProject.images[currentImage]"
+            [alt]="selectedProject.title"
             class="carousel-img"
-          >
+            [ngClass]="{ 'fade': true }"
+          />
         </div>
         
         <button class="carousel-btn next" (click)="nextImage()">&#10095;</button>
