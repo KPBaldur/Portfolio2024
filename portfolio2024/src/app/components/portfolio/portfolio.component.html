@@ -1,0 +1,49 @@
+<section id="portfolio" class="portfolio">
+  <h2>Portafolio</h2>
+  
+  <div class="portfolio-container">
+    <!-- Panel de detalle -->
+    <div class="portfolio-detail">
+      <!-- Carrusel de imágenes -->
+      <div class="carousel">
+        <button class="carousel-btn prev" (click)="prevImage()">&#10094;</button>
+        
+        <div class="carousel-track">
+          <img 
+            [src]="selectedProject.images[currentImage]" 
+            [alt]="selectedProject.title" 
+            class="carousel-img"
+          >
+        </div>
+        
+        <button class="carousel-btn next" (click)="nextImage()">&#10095;</button>
+      </div>
+
+      <h3>{{ selectedProject.title }}</h3>
+      <h4>Tecnologías: {{ selectedProject.tech }}</h4>
+      <p>{{ selectedProject.description }}</p>
+      
+      <div class="links">
+        <a *ngIf="selectedProject.repo" [href]="selectedProject.repo" target="_blank">
+          <i class='bx bxl-github'></i> Repositorio
+        </a>
+        <a *ngIf="selectedProject.demo" [href]="selectedProject.demo" target="_blank">
+          <i class='bx bx-link-external'></i> Ver Proyecto
+        </a>
+      </div>
+    </div>
+
+    <!-- Lista lateral -->
+    <div class="portfolio-list">
+      <div 
+        *ngFor="let project of projects" 
+        class="project-card" 
+        [class.active]="project === selectedProject"
+        (click)="selectProject(project)">
+        <img [src]="project.images[0]" [alt]="project.title">
+        <h4>{{ project.title }}</h4>
+        <p>{{ project.tech }}</p>
+      </div>
+    </div>
+  </div>
+</section>

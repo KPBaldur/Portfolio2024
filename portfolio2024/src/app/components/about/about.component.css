@@ -1,0 +1,130 @@
+.about-me {
+  padding: 5rem 1.5rem;
+  background: #0d0d0d;
+  color: #fff;
+  text-align: center;
+}
+
+.about-me h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  background: linear-gradient(45deg, #00c3ff, #7b2cbf, #00f2ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-me p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 850px;
+  margin: 0 auto 2.5rem auto;
+  color: #e0e0e0;
+}
+
+/* Grid de skills */
+.skills-grid {
+  display: grid;
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.skill-block {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center; /* 👈 centra todo el contenido */
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.skill-block:hover {
+  transform: translateY(-6px);
+  border-color: #00c3ff;
+}
+
+.skill-block h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #00c3ff;
+  display: flex;
+  justify-content: center; /* 👈 centra ícono + texto */
+  align-items: center;
+  gap: .5rem;
+}
+
+.skill-block i {
+  font-size: 1.4rem;
+  color: #00c3ff;
+}
+
+.skill-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 1rem auto; /* centra y da margen inferior */
+  text-align: center; /* 👈 centra texto de la lista */
+}
+
+.skill-block li {
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.skill-block .skill-desc {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #e0e0e0;
+  margin-top: 0.5rem;
+}
+
+.highlights {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #9be8ff;
+  margin-bottom: 2.5rem;
+}
+
+/* Redes sociales */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.social-links a {
+  font-size: 1.8rem;
+  color: #fff;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.social-links a:hover {
+  color: #00c3ff;
+  transform: scale(1.1);
+}
+
+.social-links .custom-icon {
+  width: 26px;
+  height: 26px;
+  filter: brightness(0) invert(1); /* blanco */
+  transition: filter 0.2s, transform 0.2s;
+}
+
+.social-links .custom-icon:hover {
+  filter: none; /* color original */
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .skills-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
