@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-portfolio',
@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./portfolio.component.css']
 })
 export class PortfolioComponent {
+  @ViewChild('carouselSection', { static: false }) carouselSection!: ElementRef;
+  
   projects = [
     {
       title: 'API Regular Show',
@@ -56,19 +58,67 @@ export class PortfolioComponent {
 
   selectedProject = this.projects[0];  
   currentImage = 0;
+  animationDirection: 'left' | 'right' | 'fade' = 'fade';
+  isAnimating = false;
 
   selectProject(project: any) {
     this.selectedProject = project;
     this.currentImage = 0;
+    this.animationDirection = 'fade';
+    
+    // Scroll automático en móviles
+    this.scrollToCarousel();
   }
 
   nextImage() {
-    this.currentImage = 
-      this.currentImage = (this.currentImage + 1) % this.selectedProject.images.length;
+    if (this.isAnimating) return;
+    
+    this.isAnimating = true;
+    this.animationDirection = 'right';
+    this.currentImage = (this.currentImage + 1) % this.selectedProject.images.length;
+    
+    // Reset animation after completion
+    setTimeout(() => {
+      this.isAnimating = false;
+    }, 600);
   }
 
   prevImage() {
-    this.currentImage =
-      (this.currentImage - 1 + this.selectedProject.images.length) % this.selectedProject.images.length;
+    if (this.isAnimating) return;
+    
+    this.isAnimating = true;
+    this.animationDirection = 'left';
+    this.currentImage = (this.currentImage - 1 + this.selectedProject.images.length) % this.selectedProject.images.length;
+    
+    // Reset animation after completion
+    setTimeout(() => {
+      this.isAnimating = false;
+    }, 600);
+  }
+
+  getImageAnimationClass(): string {
+    if (this.isAnimating) {
+      switch (this.animationDirection) {
+        case 'left':
+          return 'slide-in-left';
+        case 'right':
+          return 'slide-in-right';
+        default:
+          return 'fade';
+      }
+    }
+    return 'fade';
+  }
+
+  private scrollToCarousel() {
+    // Solo hacer scroll en dispositivos móviles
+    if (window.innerWidth <= 992 && this.carouselSection) {
+      setTimeout(() => {
+        this.carouselSection.nativeElement.scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'start' 
+        });
+      }, 100);
+    }
   }
 }

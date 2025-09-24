@@ -9,6 +9,7 @@
   margin-bottom: 2rem;
   font-size: 2.5rem;
   background: linear-gradient(45deg, #00c3ff, #7b2cbf);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -39,26 +40,88 @@
 
 .carousel-img {
   width: 100%;
-  max-height: 400px;
+  height: 450px; /* Altura fija para consistencia */
   object-fit: cover;
   border-radius: 12px;
   opacity: 0;
   transform: translateX(30px);
   transition: all 0.6s ease-in-out;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 .carousel-img.fade {
   animation: fadeIn 0.6s ease-in-out forwards;
 }
 
+.carousel-img.slide-in-right {
+  animation: slideInRight 0.6s ease-in-out forwards;
+}
+
+.carousel-img.slide-in-left {
+  animation: slideInLeft 0.6s ease-in-out forwards;
+}
+
+.carousel-img.fade-out {
+  animation: fadeOut 0.4s ease-in-out forwards;
+}
+
+/* Clase para reiniciar animaciones */
+.carousel-img.animate {
+  animation-fill-mode: forwards;
+}
+
+/* Asegurar que las animaciones se ejecuten cada vez */
+.carousel-img.slide-in-right,
+.carousel-img.slide-in-left,
+.carousel-img.fade {
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateX(30px);
+    transform: translateX(30px) scale(0.95);
   }
   to {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateX(0) scale(1);
+  }
+}
+
+/* Animación de salida para transiciones más suaves */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-30px) scale(0.95);
+  }
+}
+
+/* Animación de entrada desde la derecha */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+/* Animación de entrada desde la izquierda */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
   }
 }
 
@@ -78,18 +141,36 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 195, 255, 0.8);
   border: none;
   color: #fff;
-  font-size: 2rem;
-  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  padding: 0.8rem 1rem;
   cursor: pointer;
   border-radius: 50%;
-  transition: background .2s;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 195, 255, 0.3);
+  z-index: 10;
 }
-.carousel-btn:hover { background: rgba(0,0,0,0.8); }
-.carousel-btn.prev { left: 10px; }
-.carousel-btn.next { right: 10px; }
+
+.carousel-btn:hover { 
+  background: rgba(0, 195, 255, 1);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 195, 255, 0.5);
+}
+
+.carousel-btn:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.carousel-btn.prev { 
+  left: 15px; 
+}
+
+.carousel-btn.next { 
+  right: 15px; 
+}
 
 .portfolio-detail h3 {
   font-size: 1.8rem;
@@ -154,8 +235,51 @@
 @media (max-width: 992px) {
   .portfolio-container {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
+  
   .carousel-img {
-    max-height: 250px;
+    height: 300px; /* Altura ajustada para móviles */
+  }
+  
+  .carousel-btn {
+    font-size: 1.2rem;
+    padding: 0.6rem 0.8rem;
+  }
+  
+  .carousel-btn.prev { 
+    left: 10px; 
+  }
+  
+  .carousel-btn.next { 
+    right: 10px; 
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio {
+    padding: 2rem 1rem;
+  }
+  
+  .carousel-img {
+    height: 250px;
+  }
+  
+  .portfolio-detail h3 {
+    font-size: 1.5rem;
+  }
+  
+  .portfolio-detail h4 {
+    font-size: 1rem;
+  }
+  
+  /* Mejorar scroll en móviles */
+  .portfolio-detail {
+    scroll-margin-top: 2rem;
+  }
+  
+  /* Asegurar que las animaciones funcionen en móviles */
+  .carousel-img {
+    will-change: transform, opacity;
   }
 }

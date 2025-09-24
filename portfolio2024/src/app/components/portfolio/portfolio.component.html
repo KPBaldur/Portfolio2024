@@ -3,7 +3,7 @@
   
   <div class="portfolio-container">
     <!-- Panel de detalle -->
-    <div class="portfolio-detail">
+    <div class="portfolio-detail" #carouselSection>
       <!-- Carrusel de imágenes -->
       <div class="carousel">
         <button class="carousel-btn prev" (click)="prevImage()">&#10094;</button>
@@ -13,7 +13,7 @@
             [src]="selectedProject.images[currentImage]"
             [alt]="selectedProject.title"
             class="carousel-img"
-            [ngClass]="{ 'fade': true }"
+            [ngClass]="getImageAnimationClass()"
           />
         </div>
         
