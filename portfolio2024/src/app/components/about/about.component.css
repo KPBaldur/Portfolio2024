@@ -22,6 +22,16 @@
   color: #e0e0e0;
 }
 
+.about-me img {
+  width: 180px;          /* 👈 tamaño fijo base */
+  height: auto;          /* mantiene proporción */
+  border-radius: 50%;    /* 👈 redondeada estilo avatar */
+  margin: 0 auto 2rem;   /* centra y da margen inferior */
+  display: block;        /* asegura que se centre */
+  object-fit: cover;     /* evita deformación */
+  border: 3px solid #00c3ff; /* opcional: borde decorativo */
+}
+
 /* Grid de skills */
 .skills-grid {
   display: grid;
@@ -118,12 +128,20 @@
 
 /* Responsive */
 @media (min-width: 768px) {
+  .about-me img {
+    width: 220px;
+  }
+
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (min-width: 1200px) {
+  .about-me img {
+    width: 260px;
+  }
+  
   .skills-grid {
     grid-template-columns: repeat(4, 1fr);
   }

@@ -37,22 +37,21 @@ export class SkillsComponent {
       icon: 'bx-data',
       technologies: [
         { name: 'SQL Server', level: 'Básico', icon: 'bx bxl-microsoft' },
-        { name: 'MySQL', level: 'Básico', icon: 'bx bxl-mysql' }
+        { name: 'MySQL', level: 'Básico', icon: 'bx bx-data' }
       ]
     },
     gameDev: {
       title: 'Game Development',
       icon: 'bx-game',
       technologies: [
-        { name: 'Unreal Engine 5', level: 'Avanzado', icon: 'bx bxl-unreal-engine' },
-        { name: 'Blueprints', level: 'Avanzado', icon: 'bx bxl-unreal-engine' },
-        { name: 'PaperZD', level: 'Intermedio', icon: 'bx bxl-unreal-engine' },
+        { name: 'Unreal Engine 5', level: 'Avanzado', icon: 'bx bxs-invader' },
+        { name: 'Blueprints', level: 'Avanzado', icon: 'bx bxs-invader' },
         { name: 'Blender 3D', level: 'Intermedio', icon: 'bx bxl-blender' }
       ]
     },
     adobe: {
       title: 'Adobe Creative Suite',
-      icon: 'bx-bxl-adobe',
+      icon: 'bx bxl-adobe',
       technologies: [
         { name: 'Photoshop', level: 'Avanzado', icon: 'bx bxl-adobe' },
         { name: 'Adobe Illustrator', level: 'Intermedio', icon: 'bx bxl-adobe' },
