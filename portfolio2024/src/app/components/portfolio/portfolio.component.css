@@ -1,7 +1,22 @@
+/* ===== PORTFOLIO COMPONENT ===== */
 .portfolio {
   padding: var(--spacing-xxl) var(--spacing-lg);
-  background: var(--color-background);
+  background: var(--gradient-cosmic);
   color: var(--color-white);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Fondo similar al formulario de contacto */
+.portfolio::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(ellipse at center, rgba(0, 195, 255, 0.1) 0%, transparent 70%);
+  z-index: 0;
 }
 
 .portfolio h2 {
@@ -18,6 +33,10 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 /* ===== DETALLE DEL PROYECTO ===== */

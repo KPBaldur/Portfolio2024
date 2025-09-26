@@ -98,15 +98,11 @@
 
           <button 
             type="submit" 
-            class="submit-btn"
+            class="btn-submit"
             [disabled]="isSubmitting"
-            [class.loading]="isSubmitting"
           >
             <span *ngIf="!isSubmitting">Enviar Mensaje</span>
-            <span *ngIf="isSubmitting">
-              <i class='bx bx-loader-alt bx-spin'></i>
-              Enviando...
-            </span>
+            <span *ngIf="isSubmitting">Enviando...</span>
           </button>
 
           <!-- Mensaje de confirmación/error -->

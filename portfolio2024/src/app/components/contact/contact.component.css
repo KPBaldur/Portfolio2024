@@ -159,7 +159,7 @@
 }
 
 /* ===== SUBMIT BUTTON ===== */
-.submit-btn {
+.btn-submit {
   background: linear-gradient(135deg, #00c3ff, #7b2cbf);
   border: none;
   padding: 1rem 2rem;
@@ -179,21 +179,21 @@
   overflow: hidden;
 }
 
-.submit-btn:hover:not(:disabled) {
+.btn-submit:hover:not(:disabled) {
   transform: translateY(-2px);
   box-shadow: 0 10px 25px rgba(0, 195, 255, 0.3);
 }
 
-.submit-btn:active:not(:disabled) {
+.btn-submit:active:not(:disabled) {
   transform: translateY(0);
 }
 
-.submit-btn:disabled {
+.btn-submit:disabled {
   opacity: 0.7;
   cursor: not-allowed;
 }
 
-.submit-btn.loading {
+.btn-submit.loading {
   background: linear-gradient(135deg, #666, #888);
 }
 

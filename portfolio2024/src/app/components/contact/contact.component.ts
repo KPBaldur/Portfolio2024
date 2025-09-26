@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import emailjs from '@emailjs/browser';
 
 @Component({
   selector: 'app-contact',
@@ -23,6 +24,9 @@ export class ContactComponent implements OnInit {
 
   ngOnInit(): void {
     this.initializeForm();
+    
+    // Inicializar EmailJS con tu Public Key
+    emailjs.init('YOUR_PUBLIC_KEY'); // Reemplaza con tu Public Key de EmailJS
   }
 
   private initializeForm(): void {
@@ -35,30 +39,51 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit(): void {
-    if (this.contactForm.valid && !this.isSubmitting) {
-      this.isSubmitting = true;
-      this.showMessage = false;
-
-      // Simular envío del formulario
-      setTimeout(() => {
-        this.simulateEmailSend();
-        this.isSubmitting = false;
-        this.showMessage = true;
-      }, 2000);
-    } else {
-      this.markFormGroupTouched();
-    }
+    this.sendEmail();
   }
 
-  private simulateEmailSend(): void {
-    // Aquí puedes integrar con EmailJS, Node.js + Nodemailer, o cualquier servicio de email
-    const success = Math.random() > 0.1; // 90% de éxito para simulación
-    
-    if (success) {
-      this.submitMessage = 'Tu mensaje ha sido enviado correctamente. Te responderé pronto.';
-      this.contactForm.reset();
+  // Método para enviar email usando EmailJS
+  async sendEmail(): Promise<void> {
+    if (this.contactForm.valid && !this.isSubmitting) {
+      this.isSubmitting = true;
+      this.submitMessage = '';
+
+      try {
+        // Preparar los parámetros del template
+        const templateParams = {
+          from_name: this.contactForm.get('name')?.value,
+          from_email: this.contactForm.get('email')?.value,
+          subject: this.contactForm.get('subject')?.value,
+          message: this.contactForm.get('message')?.value,
+          to_name: 'Tu Nombre', // Reemplaza con tu nombre
+        };
+
+        // Enviar email usando EmailJS
+        const response = await emailjs.send(
+          'YOUR_SERVICE_ID',    // Reemplaza con tu Service ID
+          'YOUR_TEMPLATE_ID',   // Reemplaza con tu Template ID
+          templateParams
+        );
+
+        console.log('Email enviado exitosamente:', response);
+        this.submitMessage = '¡Mensaje enviado exitosamente! Te contactaré pronto.';
+        this.contactForm.reset();
+        
+      } catch (error) {
+        console.error('Error al enviar email:', error);
+        this.submitMessage = 'Error al enviar el mensaje. Por favor, inténtalo de nuevo.';
+      } finally {
+        this.isSubmitting = false;
+        this.showMessage = true;
+        
+        // Limpiar mensaje después de 5 segundos
+        setTimeout(() => {
+          this.submitMessage = '';
+          this.showMessage = false;
+        }, 5000);
+      }
     } else {
-      this.submitMessage = 'Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo.';
+      this.markFormGroupTouched();
     }
   }
 
