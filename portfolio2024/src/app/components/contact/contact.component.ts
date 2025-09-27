@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import emailjs from '@emailjs/browser';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-contact',
@@ -24,9 +25,7 @@ export class ContactComponent implements OnInit {
 
   ngOnInit(): void {
     this.initializeForm();
-    
-    // Inicializar EmailJS con tu Public Key
-    emailjs.init('YOUR_PUBLIC_KEY'); // Reemplaza con tu Public Key de EmailJS
+    emailjs.init(environment.emailjs.publicKey);
   }
 
   private initializeForm(): void {
@@ -55,13 +54,13 @@ export class ContactComponent implements OnInit {
           from_email: this.contactForm.get('email')?.value,
           subject: this.contactForm.get('subject')?.value,
           message: this.contactForm.get('message')?.value,
-          to_name: 'Tu Nombre', // Reemplaza con tu nombre
+          to_name: 'Kevin Pizarro', // Reemplaza con tu nombre
         };
 
         // Enviar email usando EmailJS
         const response = await emailjs.send(
-          'YOUR_SERVICE_ID',    // Reemplaza con tu Service ID
-          'YOUR_TEMPLATE_ID',   // Reemplaza con tu Template ID
+          environment.emailjs.serviceId,
+          environment.emailjs.templateId,
           templateParams
         );
 
