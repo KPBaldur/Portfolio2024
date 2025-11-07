@@ -120,7 +120,7 @@ p {
   color: var(--color-celeste);
 }
 
-/* ===== CARDS ===== */
+/* ===== CARDS ===== 
 .card {
   background: #1a1a1a;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -152,11 +152,12 @@ p {
 .card:hover::before {
   opacity: 1;
 }
-
+*/
 /* ===== INPUTS ===== */
 .input {
   width: 100%;
   padding: var(--spacing-sm);
+  
   background: rgba(255, 255, 255, 0.05);
   border: 2px solid var(--color-blue);
   border-radius: var(--border-radius-sm);
